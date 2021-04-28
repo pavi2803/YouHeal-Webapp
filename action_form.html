@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+   <!-- Site CSS -->
+   <link rel="stylesheet" href="style.css">
+   <!-- Colors CSS -->
+   <link rel="stylesheet" href="css/colors.css">
+   <!-- ALL VERSION CSS -->
+   <link rel="stylesheet" href="css/versions.css">
+   <!-- Responsive CSS -->
+   <link rel="stylesheet" href="css/responsive.css">
+
+</style>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YouHeal Pharmacy</title>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+<link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+    body {
+		font-family: 'Varela Round', sans-serif;
+	}	
+	.modal-newsletter {	
+		color: #999;
+		width: 625px;
+		font-size: 10px;
+		margin: 30px auto;
+	}
+	.modal-newsletter .modal-content {
+		padding: 30px;
+		border-radius: 0;		
+		border: none;
+	}
+	.modal-newsletter .modal-header {
+		border-bottom: none;   
+        position: relative;
+		border-radius: 0;
+	}
+	.modal-newsletter h4 {
+		color: #000;
+		font-size: 30px;
+		margin: 0;
+		font-weight: bold;
+	}
+	.modal-newsletter .close {
+		position: absolute;
+		top: -15px;
+		right: -15px;
+		text-shadow: none;
+		opacity: 0.3;
+		font-size: 24px;
+	}
+	.modal-newsletter .close:hover {
+		opacity: 0.8;
+	}
+	.modal-newsletter .icon-box {
+		color: #7265ea;		
+		display: inline-block;
+		z-index: 9;
+		text-align: center;
+		position: relative;
+		margin-bottom: 10px;
+	}
+	.modal-newsletter .icon-box i {
+		font-size: 110px;
+	}
+	.modal-newsletter .form-control, .modal-newsletter .btn {
+		min-height: 46px;
+		border-radius: 0;
+	}
+	.modal-newsletter .form-control {
+		box-shadow: none;
+		border-color: #dbdbdb;
+	}
+	.modal-newsletter .form-control:focus {
+		border-color: #f95858;
+		box-shadow: 0 0 8px rgba(249, 88, 88, 0.4);
+	}
+    .modal-newsletter .btn {
+        color: white;
+		background: slateblue;
+		text-decoration: none;
+		transition: all 0.4s;
+        line-height: normal;
+		padding: 6px 20px;
+		min-width: 150px;
+		margin-left: 6px !important;
+        border: none;
+    }
+	.modal-newsletter .btn:hover, .modal-newsletter .btn:focus {
+		box-shadow: 0 0 8px rgba(249, 88, 88, 0.4);
+		background: #f72222;
+		outline: none;
+	}
+	.modal-newsletter .input-group {
+		margin-top: 30px;
+	}
+	.hint-text {
+		margin: 100px auto;
+		text-align: center;
+	}
+</style>
+<script>
+	$(document).ready(function(){
+		$("#myModal").modal('show');
+	});
+</script>
+</head>
+<boy>
+
+
+
+
+
+<table class="table">
+
+
+<thead>
+
+
+<th>S.No</th>
+
+<th>Doctor Name</th>
+<th>Contact Number</th>
+<th>Speciality</th>
+<th>Availability Time</th>
+<tr>
+<td>1</td>
+<td>Dr.Pavithra</td>
+<td>6745637829</td>
+<td>Duty Doctor, General Check up queries</td>
+<td>7:00am-6:00pm</td>
+
+</tr>
+
+<tr>
+<td>2</td>
+<td>Dr.Abinaya</td>
+<td>6744646449</td>
+<td>Eye Specialist, Dermatologist</td>
+<td>8:00am-8:00pm</td>
+
+</tr>
+
+<tr>
+<td>3</td>
+<td>Dr.Dhanuja</td>
+<td>67446445466</td>
+<td>Opthalmologist</td>
+<td>8:00am-2:00pm</td>
+
+</tr>
+
+
+
+
+
+</thead>
+
+<tbody id = "tbody1">
+
+
+
+
+</tbody>
+
+
+
+
+<div id="myModal" class="modal fade">
+	<div class="modal-dialog modal-newsletter">
+		<div class="modal-content">
+			<form action="/examples/actions/confirmation.php" method="post">
+				<div class="modal-header">
+					<h4>Hey! Here's how we can help</h4>	
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span>&times;</span></button>
+				</div>
+				<div class="modal-body">					
+					<p>Get to know about our services and more. Contact our doctors directly for any queries</p>
+					
+					</div>
+				</div>
+			</form>			
+		</div>
+	</div>
+
+
+<center>
+<img src="images/YOUHEALlogo.png" width="150" height="70" alt="image"></a><br><br>
+</body>
+</html>

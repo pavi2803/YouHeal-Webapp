@@ -1,0 +1,101 @@
+<html>
+
+<head>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+
+</head>
+
+<body>
+
+
+	<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+						
+						
+						
+	<input type="text" id="name" name="firstname" placeholder="Patient Name"><br>
+
+			
+						
+     <input type="text" id="phno" name="phone" placeholder="Phone Number"><br>
+						
+				
+	<input type="text" id="docname" name="doctor" placeholder="Doctor name"><br>
+				
+					
+					<br>
+					<br>
+	<button id="btninsert">Book</button><br>
+	
+	
+	<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script> 
+	
+	
+	
+	
+   
+	 <script id="MainScript">
+
+			var firebaseConfig = {
+			apiKey: "AIzaSyAw8YK1YBXf-lzvJ1gydt60UTBGInUGH0w",
+			authDomain: "youheal-76116.firebaseapp.com",
+			projectId: "youheal-76116",
+			storageBucket: "youheal-76116.appspot.com",
+			messagingSenderId: "210211164910",
+			appId: "1:210211164910:web:f5b5227b58341a6c6fd9ff"
+		  };
+		  
+		  
+			firebase.initializeApp(firebaseConfig);
+
+  
+			var name,phone,doctor;
+  
+			function writeData(){
+	  
+	  
+				  name = document.getElementById("name");
+				  phone = document.getElementById("phno");
+				  doctor= document.getElementById("docname");
+				}
+				
+				
+				document.getElementById('btninsert').onclick = function(){
+						writeData();
+						firebase.database().ref('patient'+patientdetails).set({
+								Name : name,
+								Phone Number : phone,
+								Doctor Referred : doctor
+						
+						
+						});
+				
+				
+				}
+  
+	
+		
+	 
+		</script>
+					
+
+
+
+</body>
+
+
+
+
+
+
+
+</html>

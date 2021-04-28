@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<body><center>
+<img src="images/YOUHEALlogo.png" width="150" height="70" alt="image"></a>
+
+<canvas id="myCanvas1" width="1340" height="100"></canvas>
+<style>
+input[type=text], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 50%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: slateblue;
+}
+
+div {
+  border-radius: 5px;
+  background-color: slateblue;
+  padding: 20px;
+}
+</style>
+<body>
+
+<h3>Place an Order</h3>
+
+<div>
+				<form action="/action_page.php">
+					<label for="medicine"></label>
+						<input type="text" id="medicine" name="medicine" placeholder="Medicine">
+
+						<label for="quantity"></label>
+						<input type="text" id="quantity" name="quantity" placeholder="Quantity">
+						
+						
+		
+				
+				
+	
+					<div class="formBox">
+						<button id="btn">Proceed to Order</button>
+					</div>
+	
+					<div id="msg">
+						<pre></pre>
+					</div>
+				</form>
+				</div>
+    <script>
+        let patients = [];
+        // example {id:1592304983049, title: 'Deadpool', year: 2015}
+        const addpatient = (ev)=>{
+            ev.preventDefault();  //to stop the form submitting
+            let patient = {
+                id: Date.now(),
+                Medicine: document.getElementById('medicine').value,
+                Quantity: document.getElementById('quantity').value
+            }
+            patients.push(patient);
+            document.forms[0].reset(); // to clear the form for the next entries
+            //document.querySelector('form').reset();
+
+            //for display purposes only
+            console.warn('added' , {patients} );
+            let pre = document.querySelector('#msg pre');
+            pre.textContent = '\n' + JSON.stringify(patients, '\t', 2);
+
+            //saving to localStorage
+            localStorage.setItem('MyMedicineList', JSON.stringify(patients) );
+        }
+        document.addEventListener('DOMContentLoaded', ()=>{
+            document.getElementById('btn').addEventListener('click', addpatient);
+        });
+    </script>
+</body>
+</html>
